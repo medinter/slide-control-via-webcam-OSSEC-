@@ -1,0 +1,11 @@
+Is Qt classified as a c++ library? If not a library, how would you classify QT
+
+Qt is a framework, not a library. This isn't a hard-and-fast distinction enforced by the programming language, rather, it describes how the code is designed and intended to be used:
+
+A library is someone else's code that is used by your code. Using a library means that your application remains as it is, it just has another library to help it out.
+
+A framework is someone else's code that your code fits into. Using a framework means that the framework defines the structure of your application.
+
+If you're using a framework, you need to learn that framework's conventions, which may be a bit different than the base language; otherwise, you can spend a lot of time fighting the framework, and you'll be missing out on some of what it has to offer.
+
+Qt in particular doesn't look like straight vanilla C++ because it isn't straight vanilla C++. It adds (limited) extensions to C++'s object system to permit features like signals and slots; these extensions are implemented using Qt's moc, which acts as a C++ preprocessor. For more information on Qt's extensions to C++: 
